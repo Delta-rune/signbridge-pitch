@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignVoice | AI Assistant</title>
+    <title>Synora | SignVoice AI Assistant</title>
     <style>
         :root {
             --bg: #121212;
@@ -119,20 +119,20 @@
         /* === TOP NAVIGATION === */
         .top-nav {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 25px;
+            right: 25px;
             z-index: 100;
         }
 
         .nav-login-btn {
             background: transparent;
             color: var(--cyan);
-            border: 2px solid var(--cyan);
-            padding: 10px 20px;
+            border: 3px solid var(--cyan);
+            padding: 12px 25px;
             font-family: 'Arial Black', sans-serif;
-            font-size: 1em;
+            font-size: 0.9em;
             font-weight: 900;
-            border-radius: 30px;
+            border-radius: 5px;
             cursor: pointer;
             text-transform: uppercase;
             transition: all 0.3s;
@@ -152,14 +152,16 @@
             display: none;
         }
 
+        /* UPDATED HERO BANNER TO BLACK */
         .hero-banner {
-            background: linear-gradient(135deg, #282a36, #6272a4);
-            padding: 80px 20px 60px 20px;
+            background: #000000;
+            padding: 100px 20px 80px 20px;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-            border-bottom: 3px solid var(--accent);
+            border-bottom: 2px solid var(--accent);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             animation: fadeInUp 0.8s ease-out;
         }
 
@@ -168,45 +170,56 @@
             color: white;
             padding: 6px 15px;
             border-radius: 5px;
-            font-size: 12px;
+            font-size: 11px;
             text-transform: uppercase;
             margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .company-name {
+            color: var(--accent);
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 5px;
         }
 
         .hero-banner h1 {
-            font-size: 3.2em;
-            margin: 10px 0;
-            color: var(--cyan);
-            letter-spacing: -1px;
+            font-size: 4.5em;
+            margin: 0 0 15px 0;
+            color: #ffffff;
+            letter-spacing: -2px;
+            line-height: 1;
         }
 
         .hero-banner p {
-            max-width: 700px;
+            max-width: 750px;
             margin: 0 auto;
-            opacity: 0.9;
-            font-size: 1.2em;
-            line-height: 1.3;
+            opacity: 0.8;
+            font-size: 1.1em;
+            line-height: 1.4;
+            color: #ffffff;
+            text-transform: uppercase;
         }
 
         .listing-container {
             max-width: 1100px;
-            margin: 40px auto;
+            margin: 50px auto;
             padding: 0 20px;
             display: grid;
             grid-template-columns: 1fr;
-            gap: 20px;
+            gap: 30px;
         }
 
         @media (min-width: 850px) {
             .listing-container {
                 grid-template-columns: 2fr 1fr;
-                gap: 40px;
-                margin-top: 40px;
+                gap: 50px;
             }
         }
 
         .main-col section {
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             animation: fadeInUp 1s ease-out both;
         }
 
@@ -227,18 +240,18 @@
         }
 
         .section-title {
-            font-size: 1.8em;
+            font-size: 2em;
             color: var(--accent);
             border-bottom: 4px solid var(--secondary);
-            padding-bottom: 8px;
-            margin-bottom: 25px;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
             text-transform: uppercase;
         }
 
         .feature-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 15px;
+            gap: 20px;
         }
 
         @media (min-width: 600px) {
@@ -249,34 +262,35 @@
 
         .feat-card {
             background: var(--card);
-            padding: 25px;
+            padding: 30px;
             border: 3px solid #333;
             height: 100%;
             box-sizing: border-box;
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .feat-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
             border-color: var(--accent);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
         }
 
         .feat-card h4 {
-            margin: 0 0 10px 0;
+            margin: 0 0 12px 0;
             color: var(--green);
-            font-size: 1.2em;
+            font-size: 1.3em;
             text-transform: uppercase;
         }
 
         .feat-card p {
-            font-size: 1em;
+            font-size: 1.05em;
             margin: 0;
-            line-height: 1.4;
+            line-height: 1.5;
             opacity: 0.9;
         }
 
         .vision-text {
-            font-size: 1.25em;
+            font-size: 1.3em;
             line-height: 1.6;
             color: var(--green);
         }
@@ -284,13 +298,13 @@
         .timeline {
             list-style: none;
             padding: 0;
-            font-size: 1.1em;
+            font-size: 1.15em;
         }
 
         .timeline li {
             position: relative;
-            padding-left: 30px;
-            margin-bottom: 15px;
+            padding-left: 35px;
+            margin-bottom: 20px;
         }
 
         .timeline li:before {
@@ -299,16 +313,17 @@
             position: absolute;
             left: 0;
             font-weight: 900;
+            font-size: 1.2em;
         }
 
         .sidebar-card {
             background: var(--card);
-            padding: 35px;
+            padding: 40px;
             text-align: center;
-            border: 4px solid var(--green);
-            box-shadow: 10px 10px 0px var(--secondary);
+            border: 5px solid var(--green);
+            box-shadow: 12px 12px 0px var(--secondary);
             position: sticky;
-            top: 20px;
+            top: 30px;
         }
 
         .cta-btn {
@@ -316,19 +331,19 @@
             color: var(--bg);
             border: none;
             width: 100%;
-            padding: 20px;
-            font-size: 1.4em;
+            padding: 22px;
+            font-size: 1.5em;
             font-weight: 900;
             cursor: pointer;
             transition: 0.2s;
-            margin-top: 15px;
+            margin-top: 20px;
             text-transform: uppercase;
         }
 
         .cta-btn:hover {
             background: var(--cyan);
-            transform: translate(-3px, -3px);
-            box-shadow: 5px 5px 0px white;
+            transform: translate(-4px, -4px);
+            box-shadow: 6px 6px 0px white;
         }
 
         /* === APP PROTOTYPE SHELL === */
@@ -386,7 +401,7 @@
             background: none;
             border: none;
             color: var(--accent);
-            font-size: 35px;
+            font-size: 40px;
             cursor: pointer;
             padding-right: 20px;
             font-weight: 900;
@@ -398,7 +413,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         .input-group {
@@ -411,18 +426,18 @@
             color: var(--cyan);
             font-size: 0.9em;
             text-transform: uppercase;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
         .input-group input {
             background: var(--card);
-            border: 2px solid #444;
+            border: 3px solid #444;
             color: white;
-            padding: 15px;
+            padding: 18px;
             font-size: 1.1em;
             font-family: 'Arial', sans-serif;
             font-weight: bold;
-            border-radius: 5px;
+            border-radius: 0px;
             outline: none;
             transition: border-color 0.3s;
         }
@@ -433,39 +448,39 @@
 
         .login-loader {
             display: none;
-            width: 30px;
-            height: 30px;
-            border: 4px solid var(--secondary);
-            border-top: 4px solid var(--green);
+            width: 40px;
+            height: 40px;
+            border: 5px solid var(--secondary);
+            border-top: 5px solid var(--green);
             border-radius: 50%;
             animation: spin 1s linear infinite;
-            margin: 20px auto;
+            margin: 25px auto;
         }
 
         .menu-item {
             background: var(--card);
-            padding: 22px;
-            margin-bottom: 15px;
-            border-left: 8px solid var(--accent);
+            padding: 25px;
+            margin-bottom: 18px;
+            border-left: 10px solid var(--accent);
             cursor: pointer;
             transition: all 0.2s ease;
         }
 
         .menu-item:hover {
-            transform: translateX(8px);
+            transform: translateX(10px);
             background: #282a36;
         }
 
         .menu-item h3 {
             margin: 0 0 5px 0;
             color: var(--cyan);
-            font-size: 1.2em;
+            font-size: 1.3em;
             text-transform: uppercase;
         }
 
         .menu-item p {
             margin: 0;
-            font-size: 0.9em;
+            font-size: 0.95em;
             opacity: 0.9;
         }
 
@@ -480,13 +495,14 @@
 
         .output-box {
             background: #000;
-            padding: 25px;
-            font-size: 24px;
+            padding: 30px;
+            font-size: 26px;
             font-weight: 900;
-            border-left: 10px solid var(--accent);
-            margin: 20px 0;
+            border-left: 12px solid var(--accent);
+            margin: 25px 0;
             color: var(--green);
             text-transform: uppercase;
+            text-align: center;
         }
 
         .thinking {
@@ -500,7 +516,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.85);
+            background: rgba(0, 0, 0, 0.9);
             display: none;
             justify-content: center;
             align-items: center;
@@ -512,9 +528,9 @@
         .modal-content {
             background: var(--card);
             border: 4px solid var(--accent);
-            padding: 30px;
+            padding: 40px;
             width: 100%;
-            max-width: 320px;
+            max-width: 350px;
             text-align: center;
             animation: modalPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
@@ -523,13 +539,13 @@
             color: var(--cyan);
             text-transform: uppercase;
             margin-top: 0;
-            font-size: 1.4em;
+            font-size: 1.6em;
         }
 
         .modal-content p {
-            font-size: 1em;
+            font-size: 1.1em;
             opacity: 0.9;
-            margin: 15px 0 25px 0;
+            margin: 15px 0 30px 0;
             text-transform: lowercase;
         }
 
@@ -537,12 +553,12 @@
             background: var(--green);
             color: var(--bg);
             border: none;
-            padding: 15px 30px;
+            padding: 18px 30px;
             font-weight: 900;
             cursor: pointer;
             width: 100%;
             text-transform: uppercase;
-            font-size: 1.2em;
+            font-size: 1.3em;
         }
     </style>
 </head>
@@ -561,26 +577,27 @@
 
         <div class="hero-banner">
             <div class="proto-badge">Prototype Briefing</div>
+            <div class="company-name">Synora Presents</div>
             <h1>SIGNVOICE AI</h1>
-            <p>REMOVING COMMUNICATION BARRIERS IN PUBLIC SPACES</p>
+            <p>Removing communication barriers in public spaces with real-time AI</p>
         </div>
 
         <div class="listing-container">
             <div class="main-col">
                 <section>
                     <h2 class="section-title">THE VISION</h2>
-                    <p class="vision-text">SIGNVOICE IS MORE THAN AN APP; IT IS A BARRIER-FREE WORLD. WE AIM TO EMPOWER
-                        THE DEAF AND MUTE COMMUNITY TO COMMUNICATE EFFORTLESSLY IN HOSPITALS, BANKS, AND LOCAL
-                        SHOPS—RECLAIMING THEIR INDEPENDENCE THROUGH SEAMLESS, REAL-TIME AI.</p>
+                    <p class="vision-text">SIGNVOICE EMPOWERS THE DEAF AND MUTE COMMUNITY TO COMMUNICATE EFFORTLESSLY IN
+                        HOSPITALS, BANKS, AND LOCAL SHOPS—RECLAIMING THEIR INDEPENDENCE THROUGH SEAMLESS, REAL-TIME AI.
+                    </p>
                 </section>
 
                 <section>
-                    <h2 class="section-title">HOW IT WORKS (DEEP DIVE)</h2>
+                    <h2 class="section-title">HOW IT WORKS</h2>
                     <div class="feature-grid">
                         <div class="feat-card">
                             <h4>1. Capture & tracking</h4>
-                            <p>Computer Vision (OpenCV) captures the live feed. MediaPipe extracts spatial coordinates
-                                of hand landmark points in real-time.</p>
+                            <p>Computer Vision (OpenCV) captures the live feed. MediaPipe extracts hand landmark
+                                coordinates in real-time.</p>
                         </div>
                         <div class="feat-card">
                             <h4>2. Gesture classification</h4>
@@ -604,51 +621,40 @@
                     <h2 class="section-title">ADVANTAGES</h2>
                     <ul class="timeline">
                         <li>Instant independence in shops, banks, and schools.</li>
-                        <li>Reduced social isolation and increased social inclusion.</li>
+                        <li>Reduced social isolation and increased inclusion.</li>
                         <li>Low-cost, mobile-deployed digital interpreter.</li>
-                        <li>Learning Mode assists normal people in learning sign language.</li>
+                        <li>Learning Mode assists others in learning sign language.</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2 class="section-title">PROJECT BLUEPRINT & SCALABILITY</h2>
+                    <h2 class="section-title">GLOBAL SCALABILITY</h2>
                     <div class="feature-grid">
                         <div class="feat-card">
                             <h4 style="color:var(--cyan)">Cloud Synchronization</h4>
-                            <p>User accounts securely sync custom settings, saved quick phrases, and learning data
-                                across multiple devices seamlessly.</p>
+                            <p>User accounts sync custom settings and saved quick phrases across multiple devices
+                                seamlessly.</p>
                         </div>
                         <div class="feat-card">
-                            <h4 style="color:var(--cyan)">Global Translation Matrix</h4>
-                            <p>Scalable architecture designed to translate regional sign languages into major
-                                international spoken languages, maximizing global utility.</p>
-                        </div>
-                        <div class="feat-card">
-                            <h4 style="color:var(--cyan)">Phase 1: Concept</h4>
-                            <p>UI/UX definition, hand tracking optimization, and concept vocabulary development
-                                (Malayalam context).</p>
-                        </div>
-                        <div class="feat-card">
-                            <h4 style="color:var(--cyan)">Phase 2: Product</h4>
-                            <p>Offline model integration, cross-platform mobile deployment using Flutter, and expanded
-                                gesture sets.</p>
+                            <h4 style="color:var(--cyan)">Global Translation</h4>
+                            <p>Scalable architecture designed to translate regional signs into major international
+                                spoken languages.</p>
                         </div>
                     </div>
                 </section>
 
                 <section>
-                    <h2 class="section-title" style="color:var(--red); border-bottom-color: var(--red);">CHALLENGES &
-                        LIMITATIONS</h2>
+                    <h2 class="section-title" style="color:var(--red); border-bottom-color: var(--red);">CHALLENGES</h2>
                     <div class="feature-grid">
                         <div class="feat-card">
                             <h4>Environmental dependency</h4>
-                            <p>COMPUTER VISION STRUGGLES IN LOW-LIGHT OR DUSTY ENVIRONMENTS, IMPACTING SIGN RECOGNITION
-                                ACCURACY.</p>
+                            <p>Computer vision accuracy depends on lighting conditions and camera quality in public
+                                hubs.</p>
                         </div>
                         <div class="feat-card">
                             <h4>Dialect variance</h4>
-                            <p>SIGN LANGUAGE IN INDIA (ISL) VARIES REGIONALLY, REQUIRING LOCALIZED VOCABULARY DATASETS
-                                FOR TRAINING.</p>
+                            <p>Sign language (ISL) varies regionally, requiring specialized datasets for localized
+                                accuracy.</p>
                         </div>
                     </div>
                 </section>
@@ -659,7 +665,7 @@
                     <h3 style="margin:0; text-transform: uppercase;">Launch Demo</h3>
                     <p style="font-size:1em; opacity:0.8; margin-top:10px;">EXPERIENCE THE SIGNVOICE INTERFACE</p>
                     <button class="cta-btn" onclick="runPrototypeTransition()">RUN CONCEPT PROTOTYPE</button>
-                    <p style="font-size:0.7em; margin-top:15px; color:var(--red);">* REQUIRES CAMERA PERMISSIONS</p>
+                    <p style="font-size:0.75em; margin-top:20px; color:var(--red);">* REQUIRES CAMERA PERMISSIONS</p>
                 </div>
             </div>
         </div>
@@ -693,18 +699,18 @@
                 <div class="login-form">
                     <div class="input-group">
                         <label>Email Address</label>
-                        <input type="email" id="loginEmail" value="demo_user@ktu.edu">
+                        <input type="email" id="loginEmail" value="demo_user@synora.ai">
                     </div>
                     <div class="input-group">
                         <label>Password</label>
-                        <input type="password" value="password123">
+                        <input type="password" value="••••••••">
                     </div>
 
                     <div id="loader" class="login-loader"></div>
                     <button class="cta-btn" id="authBtn" onclick="simulateLogin()">SIGN IN</button>
 
                     <p
-                        style="font-family: 'Arial', sans-serif; font-size: 0.85em; color: var(--accent); cursor: pointer; margin-top: 10px;">
+                        style="font-family: 'Arial', sans-serif; font-size: 0.85em; color: var(--accent); cursor: pointer; margin-top: 15px;">
                         Forgot Password?</p>
                 </div>
             </div>
@@ -727,12 +733,11 @@
                         <h3>💬 QUICK PHRASES</h3>
                         <p>Common daily sentences</p>
                     </div>
-                    <div class="menu-item"
-                        onclick="showMsg('GLOBAL TRANSLATION', 'language module loading... setting default to english.')">
+                    <div class="menu-item" onclick="showMsg('GLOBAL SETTINGS', 'default language set to English.')">
                         <h3>🌍 GLOBAL SETTINGS</h3>
                         <p>Change target spoken language</p>
                     </div>
-                    <div class="menu-item" onclick="showMsg('AI CHATBOT', 'hello! how can i assist you today?')">
+                    <div class="menu-item" onclick="showMsg('AI CHATBOT', 'how can i assist you today?')">
                         <h3>🤖 HELP CHATBOT</h3>
                         <p>Assistant & Instructions</p>
                     </div>
@@ -746,8 +751,7 @@
                 </div>
                 <video id="webcam" autoplay playsinline></video>
                 <div class="output-box" id="signText">AWAITING GESTURE...</div>
-                <p style="font-size:0.8em; opacity:0.7; text-align:center;">Perform the Malayalam sign for "Water"</p>
-                <button class="cta-btn" style="margin-top: 10px;" id="detectBtn" onclick="runSignDemo()">DETECT
+                <button class="cta-btn" style="margin-top: auto;" id="detectBtn" onclick="runSignDemo()">DETECT
                     SIGN</button>
             </div>
 
@@ -767,14 +771,10 @@
     <script>
         let videoStream = null;
 
-        // --- AUTO STARTUP LOGIC ---
         window.onload = () => {
-            // Wait 2 seconds, then fade out the initial website splash screen
             setTimeout(() => {
                 const splash = document.getElementById('startupSplash');
                 splash.style.opacity = '0';
-
-                // Once faded out, hide it completely and show the landing page
                 setTimeout(() => {
                     splash.style.display = 'none';
                     document.getElementById('introPage').style.display = 'block';
@@ -789,29 +789,20 @@
         }
         function closeModal() { document.getElementById('customModal').style.display = 'none'; }
 
-        // --- Core Navigation ---
         function openAppTo(screenId) {
             document.getElementById('introPage').style.display = 'none';
             document.getElementById('appShell').style.display = 'block';
             nav(screenId);
         }
 
-        // --- PROTOTYPE TRANSITION (Bypasses Login) ---
         function runPrototypeTransition() {
             openAppTo('appSplash');
-            // Show the logo for 1.5 seconds, then auto-navigate to the Dashboard
-            setTimeout(() => {
-                nav('home');
-            }, 1500);
+            setTimeout(() => { nav('home'); }, 1500);
         }
 
-        // --- SPLASH TRANSITION AFTER LOGIN ---
         function runAppSplashTransition() {
             nav('appSplash');
-            // Show the logo for 1.5 seconds, then auto-navigate to the Dashboard
-            setTimeout(() => {
-                nav('home');
-            }, 1500);
+            setTimeout(() => { nav('home'); }, 1500);
         }
 
         function closeApp() {
@@ -825,32 +816,26 @@
             document.getElementById(id).classList.add('active');
         }
 
-        // --- Simulated Login Logic ---
         function simulateLogin() {
             const btn = document.getElementById('authBtn');
             const loader = document.getElementById('loader');
             btn.style.display = 'none';
             loader.style.display = 'block';
-
             setTimeout(() => {
                 btn.style.display = 'block';
                 loader.style.display = 'none';
-
-                // After successful login, trigger the transition splash!
                 runAppSplashTransition();
             }, 1500);
         }
 
-        // --- Camera Management ---
         function startCamera() {
             navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' } }).then(s => {
                 videoStream = s; document.getElementById('webcam').srcObject = s;
-            }).catch(e => showMsg('ERROR', 'camera permission denied. check browser settings.'));
+            }).catch(e => showMsg('ERROR', 'camera permission denied.'));
         }
 
         function stopCamera() { if (videoStream) { videoStream.getTracks().forEach(t => t.stop()); } }
 
-        // --- Demo Logic ---
         function runSignDemo() {
             const out = document.getElementById('signText');
             const btn = document.getElementById('detectBtn');
@@ -858,7 +843,6 @@
             out.classList.add('thinking');
             btn.innerText = "Analyzing...";
             btn.style.background = "#e67e22";
-
             setTimeout(() => {
                 out.innerText = "I WANT WATER";
                 out.classList.remove('thinking');
@@ -876,7 +860,6 @@
             out.classList.add('thinking');
             btn.innerText = "Listening...";
             btn.style.background = "var(--secondary)";
-
             setTimeout(() => {
                 out.innerText = "DO YOU WANT COLD WATER?";
                 out.classList.remove('thinking');
